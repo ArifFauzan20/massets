@@ -37,12 +37,12 @@
                         <div class="row">
                             <div class="col-lg-12">
                             <h3 class="title text-center"><?php echo trans('lang.login');?></h3>
-                            <p id="messageerror display-none" </p>    
+                            <p id="messageerror display-none"></p>    
                         </div>
                         </div>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" name="form-login" id="form-login" method="POST">
+                    <form class="form-horizontal" name="form-login" id="form-login" action="login" method="POST">
                         {{ csrf_field() }}
 
                         <div class="form-group">

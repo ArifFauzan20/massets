@@ -9,9 +9,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 //Auth facade
-use Auth;
-use DB;
-use Validator;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 use App\User;
 
 class LoginController extends Controller
@@ -74,7 +74,7 @@ class LoginController extends Controller
         if($user) {
 
                 $res['success'] = 'success';
-                return response($res);
+                return redirect()->intended('/home');
         } else {
                 $res['success'] = 'failed';
                 $res['message']= trans('lang.invalid_login'); 
